@@ -35,7 +35,7 @@ For **development**:
 
 **Setup**
 
-With an api key that has GPT4 access run:
+With an api key that has GPT4 access run on a terminal:
 
 - `export OPENAI_API_KEY=[your api key]`
 
