@@ -39,6 +39,12 @@ With an api key that has GPT4 access run on a terminal:
 
 - `export OPENAI_API_KEY=[your api key]`
 
+If you are setting up a docker envrionment, you can also set the api key by creating a `.env` file in the root of the repo with the following content:
+  
+  
+- `OPENAI_API_KEY=[your api key]`
+
+
 
 **Run**:
 - Create an empty folder. If inside the repo, you can run:
