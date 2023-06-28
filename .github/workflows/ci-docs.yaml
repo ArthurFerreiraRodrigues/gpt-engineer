@@ -1,14 +1,17 @@
-name: Sphynx Build Test
+name: Sphynx build test and deploy
 on:
   pull_request:
     branches:
       - main
+    paths: ["docs/**"]
+
   push:
     branches:
       - main
+    paths: ["docs/**"]
 
 jobs:
-  test:
+  build-sphynx:
     runs-on: ubuntu-latest
     strategy:
       matrix:
