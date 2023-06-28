@@ -7,16 +7,21 @@ on:
     branches:
       - main
 
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   autofix:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
       - uses: pre-commit/action@v3.0.0
         continue-on-error: true
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      # commit to github
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Auto-fix"
+          git push
