@@ -1,4 +1,4 @@
-name: Project Build Test
+name: Docker Build Test
 on:
   pull_request:
     branches:
